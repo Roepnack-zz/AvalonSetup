@@ -1,0 +1,1 @@
+Quick app to make Avalon setup faster. =)
