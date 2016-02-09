@@ -31,7 +31,7 @@ class MessageSender {
         }
         if let dict = myDict {
             urlPath = String(dict.valueForKey("MailGunUrl")!)
-            fromEmail = String(dict.valueForKey("MailGunUrl")!)
+            fromEmail = String(dict.valueForKey("MailGunFromEmail")!)
         }
         
         let subject = "AVALON - " + dateString
