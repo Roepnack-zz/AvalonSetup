@@ -25,6 +25,8 @@ protocol Character {
     func can_see(other: Character) -> Bool
     
     func introduction(playerName: String) -> String
+    
+    func flavor() -> String
 }
 
 struct BasicBlue: Character {
@@ -38,6 +40,10 @@ struct BasicBlue: Character {
     
     func introduction(playerName: String) -> String {
         return "You (\(playerName)) are a \(name) (Normal Blue)."
+    }
+    
+    func flavor() -> String {
+        return "No flavor text yet."
     }
 }
 
@@ -53,6 +59,10 @@ struct Merlin: Character {
     func introduction(playerName: String) -> String {
         return "You (\(playerName)) are \(name) (a member of the blue team)."
     }
+    
+    func flavor() -> String {
+        return "No flavor text yet."
+    }
 }
 
 struct Percival: Character {
@@ -66,6 +76,10 @@ struct Percival: Character {
     
     func introduction(playerName: String) -> String {
         return "You (\(playerName)) are \(name) (a member of the blue team)."
+    }
+    
+    func flavor() -> String {
+        return "No flavor text yet."
     }
 }
 
@@ -82,6 +96,9 @@ struct BasicRed: Character {
         return "You (\(playerName)) are a \(name) (Normal Red)."
     }
     
+    func flavor() -> String {
+        return "No flavor text yet."
+    }
 }
 
 struct Assassin: Character {
@@ -95,6 +112,10 @@ struct Assassin: Character {
     
     func introduction(playerName: String) -> String {
         return "You (\(playerName)) are the \(name) (a member of a red team)."
+    }
+    
+    func flavor() -> String {
+        return "No flavor text yet."
     }
 }
 
@@ -110,6 +131,10 @@ struct Mordred: Character {
     func introduction(playerName: String) -> String {
         return "You (\(playerName)) are \(name) (a member of the red team)."
     }
+    
+    func flavor() -> String {
+        return "No flavor text yet."
+    }
 }
 
 struct Morgana: Character {
@@ -124,6 +149,10 @@ struct Morgana: Character {
     func introduction(playerName: String) -> String {
         return "You (\(playerName)) are \(name) (a member of the red team)."
     }
+    
+    func flavor() -> String {
+        return "No flavor text yet."
+    }
 }
 
 struct Oberon: Character {
@@ -137,6 +166,10 @@ struct Oberon: Character {
     
     func introduction(playerName: String) -> String {
         return "You (\(playerName)) are \(name) (a member of the red team)."
+    }
+    
+    func flavor() -> String {
+        return "No flavor text yet."
     }
 }
 
