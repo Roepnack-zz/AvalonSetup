@@ -52,10 +52,7 @@ class PlayerMeta: CustomStringConvertible {
             names += "and \(allButLast.name)"
             retVal += "You see \(names)."
         }
-        
-        NSLog(retVal)
         return retVal
-
     }
 }
 
@@ -170,6 +167,8 @@ class CharacterHandler {
             }
         }
         
-        MessageSender().sendMessages(players)
+        let firstPlayer = "\(players[(Int(arc4random()) % players.count)].name) goes first."
+        
+        MessageSender().sendMessages(players, firstPlayer: firstPlayer)
     }
 }

@@ -10,9 +10,15 @@ import Foundation
 
 class MessageSender {
 
-    func sendMessages(players: [PlayerMeta]){
+    func sendMessages(players: [PlayerMeta], firstPlayer: String){
         for p in players {
-            sendEmail(p.email, body: p.secretMessage())
+            
+            var body = ""
+            body += p.secretMessage()
+            body += "\n\n"
+            body += firstPlayer
+            
+            sendEmail(p.email, body: body)
         }
     }
     
