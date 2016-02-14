@@ -106,6 +106,12 @@ class CharacterHandler {
         hash[CharacterID.Assassin]!.quantity = 1
         hash[CharacterID.Mordred]!.quantity = 1
         
+        if numPlayers == 1 {
+            hash[CharacterID.Merlin]!.quantity = 1
+            hash[CharacterID.BasicBlue]!.quantity = 0
+            hash[CharacterID.Assassin]!.quantity = 0
+            hash[CharacterID.Mordred]!.quantity = 0
+        }
         if numPlayers >= 6 {
             hash[CharacterID.Percival]!.quantity += 1
         }
