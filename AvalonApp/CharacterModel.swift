@@ -15,6 +15,9 @@ enum CharacterID {
     case Mordred
     case Morgana
     case Oberon
+    case Arthur
+    case Guinevere
+    case EvilGuinevere
 }
 
 protocol Character {
@@ -78,6 +81,42 @@ struct Percival: Character {
         return "You (\(playerName)) are \(name) (a member of the blue team)."
     }
     
+    func flavor() -> String {
+        return "No flavor text yet."
+    }
+}
+
+struct Arthur: Character {
+    let id = CharacterID.Arthur
+    let name = "Arthur"
+    let is_red = false
+
+    func can_see(other: Character) -> Bool {
+        return other.id == CharacterID.BasicBlue
+    }
+
+    func introduction(playerName: String) -> String {
+        return "You (\(playerName)) are \(name) (a member of the blue team)."
+    }
+
+    func flavor() -> String {
+        return "No flavor text yet."
+    }
+}
+
+struct Guinevere: Character {
+    let id = CharacterID.Guinevere
+    let name = "Guinevere"
+    let is_red = false
+
+    func can_see(other: Character) -> Bool {
+        return other.id == CharacterID.Percival
+    }
+
+    func introduction(playerName: String) -> String {
+        return "You (\(playerName)) are \(name) (a member of the blue team)."
+    }
+
     func flavor() -> String {
         return "No flavor text yet."
     }
@@ -168,6 +207,24 @@ struct Oberon: Character {
         return "You (\(playerName)) are \(name) (a member of the red team)."
     }
     
+    func flavor() -> String {
+        return "No flavor text yet."
+    }
+}
+
+struct EvilGuinevere: Character {
+    let id = CharacterID.EvilGuinevere
+    let name = "EvilGuinevere"
+    let is_red = true
+
+    func can_see(other: Character) -> Bool {
+        return other.id == CharacterID.Percival
+    }
+
+    func introduction(playerName: String) -> String {
+        return "You (\(playerName)) are \(name) (a member of the red team)."
+    }
+
     func flavor() -> String {
         return "No flavor text yet."
     }
