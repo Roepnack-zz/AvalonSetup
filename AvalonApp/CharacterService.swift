@@ -75,11 +75,14 @@ class CharacterHandler {
         Merlin(),
         Percival(),
         BasicBlue(),
+        Arthur(),
+        Guinevere(),
         Assassin(),
         Mordred(),
         Morgana(),
         Oberon(),
         BasicRed(),
+        ThePage(),
     ]
     
     func getAllCharacters() -> [Character]{
