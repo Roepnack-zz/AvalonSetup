@@ -17,7 +17,7 @@ enum CharacterID {
     case Oberon
     case Arthur
     case Guinevere
-    case EvilGuinevere
+    case ThePage
 }
 
 protocol Character {
@@ -212,9 +212,9 @@ struct Oberon: Character {
     }
 }
 
-struct EvilGuinevere: Character {
-    let id = CharacterID.EvilGuinevere
-    let name = "EvilGuinevere"
+struct ThePage: Character {
+    let id = CharacterID.ThePage
+    let name = "The Page"
     let is_red = true
 
     func can_see(other: Character) -> Bool {

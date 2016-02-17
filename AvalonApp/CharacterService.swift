@@ -82,7 +82,7 @@ class CharacterHandler {
         Morgana(),
         Oberon(),
         BasicRed(),
-        EvilGuinevere(),
+        ThePage(),
     ]
     
     func getAllCharacters() -> [Character]{
