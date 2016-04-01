@@ -42,7 +42,7 @@ class BoardViewController: UIViewController {
     @IBAction func updatePlayerCount(sender: UIButton) {
         
         var count: Int = Int(sender.titleLabel!.text!)!
-        count++
+        count += 1
         
         if count > 8 {
             count = 1
