@@ -48,7 +48,7 @@ class PlayerMeta: CustomStringConvertible {
             for p in localSees {
                 names += p.name + ", "
             }
-            names.characters.dropLast(2)
+            names = String(names.characters.dropLast(2))
             names += "and \(allButLast.name)"
             retVal += "You see \(names)."
         }

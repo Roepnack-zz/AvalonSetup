@@ -22,7 +22,11 @@ class MasterViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "chooseRoles")
+        let addButton = UIBarButtonItem(
+            barButtonSystemItem: .Compose,
+            target: self,
+            action: #selector(MasterViewController.chooseRoles)
+        )
         self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
@@ -32,7 +36,12 @@ class MasterViewController: UITableViewController {
         let nib = UINib(nibName: "AddPlayerCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "AddPlayerCell")
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "addPlayerObject", name: "AddPlayer", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(MasterViewController.addPlayerObject),
+            name: "AddPlayer",
+            object: nil
+        )
         
         //create testing players
         players.append(Player(name:"Scott", email:"Scott.Roepnack@gmail.com"))

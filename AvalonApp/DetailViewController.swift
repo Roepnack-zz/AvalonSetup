@@ -40,13 +40,22 @@ class DetailViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         
-        let startButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "startGame")
+        let startButton = UIBarButtonItem(
+            barButtonSystemItem: .Done,
+            target: self,
+            action: #selector(DetailViewController.startGame)
+        )
         self.navigationItem.rightBarButtonItem = startButton
         
         let nib = UINib(nibName: "RoleCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "RoleCell")
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "roleCountChange:", name: "RoleCountChange", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(DetailViewController.roleCountChange),
+            name: "RoleCountChange",
+            object: nil
+        )
         
         suggestedGroupComposition = CharacterHandler().getDefaults(players.count)
     
